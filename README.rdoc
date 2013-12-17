@@ -1,3 +1,5 @@
-Twitter meets Music.
+For lovers Twitter and Music.
 
-つぶやいて音楽をリクエストできるものを作りたい。
+つぶやいて音楽をリクエストできる有線放送みたいなものを作りたい。
+
+http://tweet-juke.herokuapp.com/

@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>TweetJuke</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= render partial: "layouts/header" %>
+
+<div class="container" id="main">
+	<%= yield %>
+</div>
 
 </body>
 </html>

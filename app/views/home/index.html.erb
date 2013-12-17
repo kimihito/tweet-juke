@@ -1,3 +1,9 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-hogege
+<div class="jumbotron">
+	<h1>Twitter<span class="glyphicon glyphicon-heart"></span>Music</h1>
+
+	<p>Tweet + JukeBox = TweetJuke</p>	
+	<p>YoutubeやSoundCloudのURLを <code>#tweetjuke</code> でつぶやくと、リクエストとして追加されます。</p>	
+		<%= link_to "#" do %>
+			<%=image_tag("https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-gray.png") %>
+		<% end %>
+</div>

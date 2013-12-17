@@ -1,0 +1,7 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: jJA3eP9z2zMdhmefgHcOklsntr2qi2nYwurVVyenDyZNvtipccQKM79Oh5wVbs1vbr+A52Bh/U/uryMeL/yJr8XhI/n6oOMEE+5p5JcjAuJrdsrmRBf3uUa3A+XKAlL9dYYIHN1p+EaanDR8edUxUOmHgEZvtFeovz4/nBE2RR0=
+  app: tweet-juke
+  on:
+    repo: kimihito/tweet-juke

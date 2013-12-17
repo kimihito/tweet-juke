@@ -12,6 +12,7 @@ group :development, :test do
   gem 'spring'
   gem "spring-commands-rspec"
   gem 'jist'
+  gem 'guard-livereload'
 end
 
 group :production do

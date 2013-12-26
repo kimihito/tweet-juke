@@ -9,4 +9,26 @@ describe HomeController do
     end
   end
 
+  describe "POST 'create'" do
+    context "with valid attributes" do
+      it "saves the new music in the database" do
+        pending "hooo"
+      end
+      it "renders nothing true" do
+        pending "hoge"
+      end
+      it "saves the new user in the database" do
+        pending "hooo"
+      end
+    end
+    context "with invalid attributes" do
+      it "does not save the new music in the database" do
+        pending "hooo"
+      end
+      it "does not save the new user in the database" do
+        pending "hooo"
+      end
+    end
+  end
+
 end

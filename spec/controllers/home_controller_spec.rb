@@ -10,9 +10,9 @@ describe HomeController do
   end
 
   describe "POST 'create'" do
+    let(:music){ create(:valid_url) }
     context "with valid attributes" do
       it "saves the new music in the database" do
-        pending "hooo"
       end
       it "renders nothing true" do
         pending "hoge"

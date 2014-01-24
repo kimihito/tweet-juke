@@ -1,28 +1,29 @@
-<div class="jumbotron">
-	<h1>Twitter<span class="glyphicon glyphicon-heart"></span>Music</h1>
-
-	<p>Tweet + JukeBox = TweetJuke</p>
-	<p>YoutubeやSoundCloudのURLを <code>#tweetjuke</code> でつぶやくと、リクエストとして追加されます。</p>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
-
+<% if false %>
 <div class="col-md-4" id="stream">
 	<h3>Now On Air</h3>
+	<div id='player'>
+		<% if @music_player.youtube? %>
+		<% else %>
+		<% end %>
+	</div>
 
 </div>
 <div class="col-md-4" id="setlist">
 	<div id="next-music">
 		<h3>Next Music</h3>
-
+		<div class="detail">
+			<%= @next_music %>
+		</div>
 	</div>
+
 	<div id="playlist">
 		<h3>Playlist</h3>
 		<ul>
-			<li class="music"></li>
-			<li class="music"></li>
-			<li class="music"></li>
-			<li class="music"></li>
+			<% @music_playlist.each do |m| %>
+				<li class='music' style='list-style: none;'>
+					<%= m %>
+				</li>
+			<% end %>
 		</ul>
 	</div>
 </div>
@@ -30,4 +31,4 @@
 <div class="col-md-4">
 	<a class="twitter-timeline" href="https://twitter.com/search?q=%23tweetjuke" data-widget-id="412901409101602816">#tweetjuke に関するツイート</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
+</div><% end %>

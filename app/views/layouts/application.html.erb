@@ -8,7 +8,25 @@
 </head>
 <body>
 
-<%= render partial: "layouts/header" %>
+<script>
+var PUSHER_ENDPOINT='<%== Pusher::ENDPOINT %>'
+var PUSHER_GROUPS=<%== Pusher.listen to: :all %>;
+window.addEventListener('load',function(){
+  var ss=['socket.io/socket.io.js','pusher.js'];
+  for(i in ss){
+    var d=document;s=d.createElement('script');
+    s.src='http://'+PUSHER_ENDPOINT+'/'+ss[i];
+    d.body.appendChild(s);
+  }
+});
+
+window.onpusherdata = function(data){
+  document.body.innerHTML+=data;
+}
+</script>
+
+<%= render "layouts/header" %>
+<%= render 'layouts/modal' %>
 
 <div class="container" id="main">
 	<%= yield %>
